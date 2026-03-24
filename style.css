@@ -1,0 +1,267 @@
+/* 4 colours used in the pallete defined below - plus a few others for highlights, red etc. */
+
+/* GREEN VERSION */
+/* :root {
+  --tile-color: rgb(111, 179, 125);
+  --tile-letter-color: rgb(200, 238, 200);
+  --words-color: rgb(37, 90, 48);
+  --button-color: rgb(200, 238, 200);
+} */
+
+/* PURPLE VERSION */
+:root {
+  --tile-color: rgb(204, 73, 221);
+  --tile-letter-color: rgb(231, 206, 235);
+  --words-color: rgb(103, 22, 114);
+  --button-color: rgb(222, 165, 230);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+body{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;   
+  font-family: 'Helvetica', cursive;
+  height: 100vh;
+}
+
+p {
+  margin: 0px;
+  text-align:center;
+}
+
+.message{
+    width: 300px;
+    font-size: 14pt;
+    margin: 10px;
+    color:  var(--words-color);
+}
+
+#gameover {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+h1{
+    font-size: 30pt;
+    margin: 2px;
+    color: var(--words-color);
+}
+
+.container {
+    perspective: 1000px; /* Enables 3D space */
+    background-color: white;
+    padding: 0px;
+    /* display: grid;
+    gap: 10px; */
+    height: 520px;
+    width: 340px;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+} 
+
+.tile{
+  display: flex;
+  justify-content: center;	/* centres horizontally */
+  align-items: center;
+  border-radius: 5%;
+  height: 60px;
+  width: 60px;
+  color: var(--tile-letter-color);
+  background-color: var(--tile-color);
+  font-size: 18pt;
+  font-weight: bold;
+  touch-action: none;
+  position: absolute;
+  cursor: grab; /* changes the mouse pointer to open hand */
+  z-index: 0;
+  user-select: none;  /* stops the text in the element being selectable */
+}
+
+.number-box{
+  display: flex;
+  justify-content: center;	/* centres horizontally */
+  align-items: center;
+  height: 58px;
+  width: 58px;
+  color:  var(--words-color);
+  font-size: 14pt;
+  background-color: white;
+  color:  var(--words-color);
+  border-color: var(--words-color);
+  border-style: solid;
+  border-width: 1px;
+  font-size: 16pt;
+  font-weight: normal;
+  touch-action: none;
+  position: absolute;
+  cursor: grab; /* changes the mouse pointer to open hand */
+  z-index: 0;
+  user-select: none;  /* stops the text in the element being selectable */
+}
+
+.text{
+  display: flex;
+  justify-content: flex-end;	/* centres horizontally */
+  align-items: center;
+  height: 60px;
+  width: 200px;
+  background-color: white;
+  color:  var(--words-color);
+  font-size: 14pt;
+  position: absolute;
+   touch-action: none;
+  user-select: none;  /* stops the text in the element being selectable */
+}
+
+.button{
+  display: flex;
+  justify-content: center;	/* centres horizontally */
+  align-items: center;
+  border-radius: 20%;
+  height: 60px;
+  width: 60px;
+  background-color: var(--button-color);
+  color: var(--words-color);
+  border-width: 0px;
+  position: absolute;
+  font-weight: bold;
+  touch-action: none;
+  cursor: grab; /* changes the mouse pointer to open hand */
+  z-index: 0;
+  user-select: none;  /* stops the text in the element being selectable */
+  font-size: 14px;
+}
+
+
+.button:active {
+    /* Changes when the button is clicked (active state) */
+    transform: scale(110%); /* Grow the button slightly */
+    background-color: var(--tile-color); /* Even darker background color */
+}
+
+.blue-tile{
+  background-color: skyblue;
+  z-index: 1;
+  opacity: 80%;
+}
+
+.redback{
+  background-color: var(--button-color);
+}
+
+.under-tile{
+  background-color: rgb(185, 185, 185);
+}
+
+.validWord{
+  color: var(--words-color);
+  border-color: var(--words-color);
+  border-style: solid;
+  height: 54px; /* change size to be smaller to accomodate the border */
+  width: 54px;
+  border-width: 3px; 
+}
+
+#t1 {left:0px; top:0px;}
+#t2 {left:70px; top:0px;}
+#t3 {left:140px; top:0px;}
+#t4 {left:210px; top:0px;}
+#t5 {left: 280px; top: 0px;}
+  
+#t1 {left:0px; top:0px;}
+#t2 {left:70px; top:0px;}
+#t3 {left:140px; top:0px;}
+#t4 {left:210px; top:0px;}
+#t5 {left:280px; top:0px;}
+
+#t6 {left:0px; top:70px;}
+#t7 {left:70px; top:70px;}
+#t8 {left:140px; top:70px;}
+#t9 {left:210px; top:70px;}
+#t10 {left:280px; top:70px;}
+
+#t11 {left:0px; top:140px;}
+#t12 {left:70px; top:140px;}
+#t13 {left:140px; top:140px;}
+#t14 {left:210px; top:140px;}
+#t15 {left:280px; top:140px;}
+
+#t16 {left:0px; top:210px;}
+#t17 {left:70px; top:210px;}
+#t18 {left:140px; top:210px;}
+#t19 {left:210px; top:210px;}
+#t20 {left:280px; top:210px;}
+
+#t21 {left:0px; top:280px;}
+#t22 {left:70px; top:280px;}
+#t23 {left:140px; top:280px;}
+#t24 {left:210px; top:280px;}
+#t25 {left:280px; top:280px;}
+
+#reveal {left:0px; top:350px;}
+#play {left:0px; top:420px;}
+
+#score-label {left:70px; top:350px;}
+#seconds-label {left:70px; top:420px;}
+
+#sound-label {left:70px; top:490px;}
+#switch {left:0px; top:490px;}
+
+#score {left:280px; top:350px;}
+#seconds {left:280px; top:420px;}
+
+/* the following CSS is all to do with the on / off button */
+  #sound-label{
+    display: flex;
+    justify-content: start;	/* centres horizontally */
+    align-items: center;
+    height: 34px;
+    width: 60px;
+    background-color: white;
+    color: var(--words-color);
+    position: absolute;
+    touch-action: none;
+    user-select: none;  /* stops the text in the element being selectable */
+    font-size: 14px;
+  }
+
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+   /* Hide the actual checkbox */
+  .switch input { opacity: 0; width: 0; height: 0; }
+
+  /* The background track */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+
+  /* The sliding white circle */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px; width: 26px;
+    left: 4px; bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  /* Changes when checked */
+  input:checked + .slider { background-color: var(--words-color); }
+  input:checked + .slider:before { transform: translateX(26px); }

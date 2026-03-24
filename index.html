@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🙂 wyrdz 🙃</title>
+    <!-- the stylesheet below of for jquery.ui -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css"/>
+    </head>
+<body id="body">
+  <h1>🙂 wyrdz 🙃</h1>
+    <div  class="message" id="message1">
+      <p>swipe tiles to change letters & make</p>
+      <p>5 letter words across in 60 seconds</p>
+
+    </div>
+    <div class="container" id="container">
+      <div class="tile row1" id="t1"></div>
+      <div class="tile row1" id="t2">a</div>
+      <div class="tile row1" id="t3">r</div>
+      <div class="tile row1" id="t4">e</div>
+      <div class="tile row1" id="t5"></div>
+      <div class="tile row2" id="t6"></div>
+      <div class="tile row2" id="t7">y</div>
+      <div class="tile row2" id="t8">o</div>
+      <div class="tile row2" id="t9">u</div>
+      <div class="tile row2" id="t10"></div>
+      <div class="tile row3" id="t11">r</div>
+      <div class="tile row3" id="t12">e</div>
+      <div class="tile row3" id="t13">a</div>
+      <div class="tile row3" id="t14">d</div>
+      <div class="tile row3" id="t15">y</div>
+      <div class="tile row4" id="t16"></div>
+      <div class="tile row4" id="t17">f</div>
+      <div class="tile row4" id="t18">o</div>
+      <div class="tile row4" id="t19">r</div>
+      <div class="tile row4" id="t20"></div>
+      <div class="tile row5" id="t21">w</div>
+      <div class="tile row5" id="t22">y</div>
+      <div class="tile row5" id="t23">r</div>
+      <div class="tile row5" id="t24">d</div>
+      <div class="tile row5" id="t25">z</div>
+      <button class="button" id="reveal">reveal</button>
+      <div class="text" id="score-label">words found: </div>
+      <div class="number-box" id="score">0</div> 
+      <button class="button" id="play">play</button>
+      <div class="text" id="seconds-label">seconds left: </div>
+      <div class="number-box" id="seconds">60</div> 
+
+      <label class="switch" id="switch">
+        <input id='checkbox' type="checkbox" checked></input>
+        <span class="slider"></span>
+      </label>
+       <div id="sound-label">sound</div>
+
+
+    </div>
+     <div  class="message">
+      <p id="gameover">GAME OVER</p>
+      <p id="message2">you found 4 words in 60 seconds</p>
+    </div>
+    
+ <!-- Load jQuery Core first, as jQuery UI is dependent on it -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Load jQuery UI JavaScript file -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script> -->
+<!-- Load jQuery UI Touch Punch JavaScript file -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> -->
+
+
+<!-- this is the link to my own .js file -->
+  <script src="./index.js"></script>
+
+</body>
+</html>
